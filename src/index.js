@@ -1,6 +1,4 @@
-import React from 'react'
-import styles from './styles.module.css'
+import StoryPage from './storypage'
+import Typewriter from './typewriter'
 
-export const ExampleComponent = ({ text }) => {
-  return <div className={styles.test}>Example Component: {text}</div>
-}
+export { StoryPage, Typewriter }
