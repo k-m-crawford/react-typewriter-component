@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/react-typewriter-component/static/css/main.054c1123.chunk.css",
+    "main.js": "/react-typewriter-component/static/js/main.fa50375d.chunk.js",
+    "main.js.map": "/react-typewriter-component/static/js/main.fa50375d.chunk.js.map",
+    "runtime-main.js": "/react-typewriter-component/static/js/runtime-main.7eea68df.js",
+    "runtime-main.js.map": "/react-typewriter-component/static/js/runtime-main.7eea68df.js.map",
+    "static/js/2.6d642ac6.chunk.js": "/react-typewriter-component/static/js/2.6d642ac6.chunk.js",
+    "static/js/2.6d642ac6.chunk.js.map": "/react-typewriter-component/static/js/2.6d642ac6.chunk.js.map",
+    "index.html": "/react-typewriter-component/index.html",
+    "precache-manifest.c7584ce4ad1d72c108ff9ec87baf766d.js": "/react-typewriter-component/precache-manifest.c7584ce4ad1d72c108ff9ec87baf766d.js",
+    "service-worker.js": "/react-typewriter-component/service-worker.js",
+    "static/css/main.054c1123.chunk.css.map": "/react-typewriter-component/static/css/main.054c1123.chunk.css.map",
+    "static/js/2.6d642ac6.chunk.js.LICENSE.txt": "/react-typewriter-component/static/js/2.6d642ac6.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/react-typewriter-component/static/media/DisposableDroidBB.249f9330.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7eea68df.js",
+    "static/js/2.6d642ac6.chunk.js",
+    "static/css/main.054c1123.chunk.css",
+    "static/js/main.fa50375d.chunk.js"
+  ]
+}
