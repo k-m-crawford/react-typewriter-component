@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-npm install --save react-typewriter-component
+npm install react-typewriter-component
 ```
 
 ## Usage
