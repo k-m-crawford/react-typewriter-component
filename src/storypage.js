@@ -1,7 +1,9 @@
-import React, { Fragment, useEffect, useState, useRef } from 'react'
-import Typewriter from './typewriter'
+/* eslint-disable no-prototype-builtins */
+/* eslint-disable react/react-in-jsx-scope */
+import { useEffect, useState, useRef } from 'react'
+import Typewriter from '../components/typewriter'
 
-const StoryPage = ({ msgs, typeSpeed, actionables, active = true }) => {
+const StoryPage = ({ msgs, typeSpeed = 50, actionables, active = true }) => {
   const [msgSwitches, setMsgSwitches] = useState(null)
   const [displayActionables, setDisplayActionables] = useState(false)
 
@@ -14,7 +16,7 @@ const StoryPage = ({ msgs, typeSpeed, actionables, active = true }) => {
   }, [msgs.length])
 
   useEffect(() =>
-    active ? _ref.current.scrollIntoView({ behavior: 'smooth' }) : undefined
+    active ? _ref.current.scrollIntoView({ behavior: 'smooth' }) : null
   )
 
   if (!active) return <></>
@@ -42,21 +44,31 @@ const StoryPage = ({ msgs, typeSpeed, actionables, active = true }) => {
         })}
       {displayActionables && (
         <div className='button-container'>
-          {actionables.map((actionable, i) => (
-            <button
-              key={i}
-              onClick={
-                actionable.callback
-                  ? () => {
-                      actionable.callback()
-                      setDisplayActionables(false)
-                    }
-                  : null
-              }
-            >
-              {actionable.text}
-            </button>
-          ))}
+          {actionables.map((actionable, i) => {
+            if (
+              !actionable.hasOwnProperty('conditional') ||
+              (actionable.hasOwnProperty('conditional') &&
+                actionable.conditional())
+            ) {
+              return (
+                <button
+                  key={i}
+                  onClick={
+                    actionable.callback
+                      ? () => {
+                          actionable.callback()
+                          setDisplayActionables(false)
+                        }
+                      : null
+                  }
+                >
+                  {actionable.text}
+                </button>
+              )
+            } else {
+              return <span key={i} />
+            }
+          })}
         </div>
       )}
       <div ref={_ref} />

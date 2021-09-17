@@ -1,5 +1,7 @@
-import React, { Fragment, useEffect, useState, useRef } from 'react'
-import useInterval from './useinterval'
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable prettier/prettier */
+import { useRef, useEffect, useState } from 'react'
+import useInterval from '../hooks/useinterval'
 import TypeWriterSwitch from './typewriterswitch'
 
 const Typewriter = ({ msg, typeSpeed, callback }) => {
