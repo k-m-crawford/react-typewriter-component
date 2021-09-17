@@ -35,7 +35,7 @@ const App = () => {
 
   return (
     <>
-      <StoryPage msgs={["Here is an example on how to use this React component.",
+      <StoryPage    msgs={["Here is an example on how to use this React component.",
                            "Currently, only colours \\Rred\\R and \\Bblue\\B are supported. More to come.",
                            "Style the component using regular CSS.",
                            "Messages can be skipped by clicking or pressing space.",
@@ -51,13 +51,15 @@ const App = () => {
                       {text: "Click me for more text.",
                        callback: () => setSwitch(true)},
                       {text: "Non-functional actionable"}
-                    ]} />
-      <StoryPage msgs={["You clicked the button and activated more text! This one types faster.",
+                    ]} 
+      />
+      <StoryPage  msgs={["You clicked the button and activated more text! This one types faster.",
                         "That's all for the example."]} 
-      actionables={[
-        {text: "Non-functional actionable"}
-      ]}
-      active={mySwitch} />
+                  actionables={[
+                    {text: "Non-functional actionable"}
+                  ]}
+                  active={mySwitch} 
+      />
     </>
   )
 
