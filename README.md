@@ -18,7 +18,9 @@ npm install react-typewriter-component
 
 The **StoryPage** component leverages several **Typewriter** components to create text for a page. State and callbacks can be used to modify what component will display and when (**StoryPage** components have an optional _active_ prop that can be used to activate the component without re-rendering previous **StoryPage** components). Note that the _typeSpeed_ prop is also optional. 
 
-Currently, inline styles are restricted to red and blue; any text surrounded by tags \\R or \\B will be coloured. Future updates will include visual effects, sound queues, and more. 
+Currently, inline styles are restricted to red, green, and blue; any text surrounded by tags \\R, \\G or \\B will be coloured. Future updates will include visual effects, sound queues, and more. 
+
+**StoryPage** components can have _actionable_ prompts that prompt the user with buttons after the text is displayed. Actionables can have conditionals for if they are displayed as well as callbacks for what functions to perform after being clicked.
 
 Pair with **react-router-dom** for a complete text adventure engine. 
 
@@ -43,6 +45,9 @@ const App = () => {
                            "Forthcoming features will include conditionals for actionables, more typing effects, sound queues, and more."]}
                     typeSpeed={100}
                     actionables={[
+                      {conditional: () => { return true },
+                       text: "I will appear as long as the conditional function returns true.",
+                       callback: () => doSomething() },
                       {text: "Click me for more text.",
                        callback: () => setSwitch(true)},
                       {text: "Non-functional actionable"}
