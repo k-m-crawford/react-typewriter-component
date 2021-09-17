@@ -4,10 +4,14 @@
 
 [![NPM](https://img.shields.io/npm/v/react-typewriter-component.svg)](https://www.npmjs.com/package/react-typewriter-component) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+## Example
+
+View the components in action [here](https://k-m-crawford.github.io/react-typewriter-component/)
+
 ## Install
 
 ```bash
-npm install --save react-typewriter-component
+npm install react-typewriter-component
 ```
 
 ## Usage
